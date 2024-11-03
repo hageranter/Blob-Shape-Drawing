@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draw a Blob Shape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Draw a Blob Shape</h1>
+    <div class="input-group">
+      <label for="shapeInput">Enter vertices (x,y;x,y;...) or shape name (e.g., circle, cube):</label>
+      <input type="text" id="shapeInput" placeholder="e.g., 10,10;50,50;90,10 or sphere">
+    </div>
+    <div class="input-group">
+      <label for="dimensionSelect">Choose dimension:</label>
+      <select id="dimensionSelect">
+        <option value="2D">2D</option>
+        <option value="3D">3D</option>
+      </select>
+    </div>
+    <button class="draw-button" onclick="drawShape()">Draw</button>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div id="threeCanvas"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
